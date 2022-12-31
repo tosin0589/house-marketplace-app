@@ -39,6 +39,15 @@ try {
   updateProfile(auth.currentUser, {
     displayName:name
   })
+//copy everything from form data state
+  const formDataCopy = {...formData}
+  //this won't let password to be stored in database(it will be removed from object)
+   delete formDataCopy.password
+   //set time stamp to server time stamp
+   formDataCopy.timestamp = serverTimestamp()
+//updates database and adds the new user to the "users" collection.
+   await setDoc(doc(db, 'users', user.uid), formDataCopy)
+   
   navigate('/')
 }catch (error) {
   console.log(error);
