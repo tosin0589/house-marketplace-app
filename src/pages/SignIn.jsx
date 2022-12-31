@@ -53,16 +53,16 @@ const onChange  = (e) => {
                   Forgot Password
                  </Link>
 
-                 <div className="signInBar">
-                  <p className="signInText">
+                 <div className="signUpBar">
+                  <p className="signUpText">
                     Sign In
                   </p>
-                  <button className="signInButton">
+                  <button className="signUpButton">
                     <ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
                   </button>
                  </div>
               </form>
-              <Link to="/sign-up" className="registerLInk">
+              <Link to="/sign-up" className="registerLink">
                 Sign Up Instead
               </Link>
             </main>
