@@ -16,9 +16,10 @@ const navigate = useNavigate()
 const onChange  = (e) => {
   setFormData((prevState) => ({
     ...prevState,
+    //this will give wither email or password id
     [e.target.id]: e.target.value,
-  }))
-}
+  }));
+};
 
     return (
       <>
@@ -26,7 +27,7 @@ const onChange  = (e) => {
             <header>
               <p className='pageHeader'>Welcome Back!</p>
             </header>
-            <main>
+
               <form>
                 <input type="email" 
                 className= "emailInput"
@@ -53,11 +54,11 @@ const onChange  = (e) => {
                   Forgot Password
                  </Link>
 
-                 <div className="signUpBar">
-                  <p className="signUpText">
+                 <div className="signInBar">
+                  <p className="signInText">
                     Sign In
                   </p>
-                  <button className="signUpButton">
+                  <button className="signInButton">
                     <ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
                   </button>
                  </div>
@@ -65,7 +66,6 @@ const onChange  = (e) => {
               <Link to="/sign-up" className="registerLink">
                 Sign Up Instead
               </Link>
-            </main>
           </div>
       </>
     )
